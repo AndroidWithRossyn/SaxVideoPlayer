@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_bg"
+    tools:context="com.hammerapp.sx.xxplayer.activity.SpecificVideoActivity">
+    <RelativeLayout
+        android:background="@color/background"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:id="@+id/battry_lock"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:padding="7dp"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+            </ImageView>
+
+        </RelativeLayout>
+        <TextView
+            android:fontFamily="@font/mulishmedium"
+            android:id="@+id/all_title"
+            android:layout_toRightOf="@+id/battry_lock"
+            android:layout_toLeftOf="@+id/grid_btn"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:text="All Videos "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_grid_1"
+            android:id="@+id/grid_btn"
+            android:layout_toLeftOf="@+id/lock_btn"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/lock_btn"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/navigation_btn"
+            android:src="@drawable/ic_lock"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </ImageView>
+
+        <RelativeLayout
+            android:id="@+id/navigation_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_more">
+            </ImageView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/search_temp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:background="#c5cdd8"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                app:queryHint="Search"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.SearchView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_above="@+id/banner_ads"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/search_temp"
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/banner_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+</RelativeLayout>

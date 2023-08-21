@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hammerapp.sx.xxplayer.fragement.WhateAppStatusFragment">
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/background"
+        app:tabTextColor="#fff"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorColor="#fff"
+        app:tabIndicatorHeight="5dp"
+        app:tabPaddingStart="25dp"
+        app:tabPaddingEnd="25dp"
+        android:id="@+id/tab_layout"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_above="@+id/native_ads"
+        android:layout_below="@+id/tab_layout"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.viewpager.widget.ViewPager>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+</RelativeLayout>
